@@ -441,10 +441,14 @@ class Client(commands.Cog):
 
     @commands.command()
     async def porn(self, ctx):
+        if ctx.channel.is_nsfw():
             rnd = random.randint(0,5)
             memes = reddit.subreddit('porn').new(limit=7)
             post = [p for p in memes if not p.stickied][rnd]
             await ctx.send(post.url)
+        else:
+            await ctx.send("Nigga behave yourself , this is no NSFW channel")
+
 
     @commands.command()
     async def show(self, ctx , query: str):
@@ -459,13 +463,16 @@ class Client(commands.Cog):
     @commands.cooldown(5, 120, commands.BucketType.default)
     @commands.command()
     async def hentai(self, ctx):
-        rnd = random.randint(0,5)
-        hentai = reddit.subreddit('hentai').new(limit=7)
-        post = [p for p in hentai if not p.stickied][rnd]
-        embed = discord.Embed(description=post.title , color=randint(0, 0xFFFFFF), title="Hentai")
-        embed.set_author(name="Hentai for cunts",icon_url="https://vignette.wikia.nocookie.net/filthy-frank/images/9/98/Salamander_Man2.png")
-        embed.set_image(url=str(post.url))
-        await ctx.send(embed=embed)
+        if ctx.channel.is_nsfw():
+            rnd = random.randint(0,5)
+            hentai = reddit.subreddit('hentai').new(limit=7)
+            post = [p for p in hentai if not p.stickied][rnd]
+            embed = discord.Embed(description=post.title , color=randint(0, 0xFFFFFF), title="Hentai")
+            embed.set_author(name="Hentai for cunts",icon_url="https://vignette.wikia.nocookie.net/filthy-frank/images/9/98/Salamander_Man2.png")
+            embed.set_image(url=str(post.url))
+            await ctx.send(embed=embed)
+        else:
+            await ctx.send("Nigga behave yourself , this is no NSFW channel")
     @hentai.error
     async def mine_error(self, ctx, error):
         if isinstance(error, commands.CommandOnCooldown):
@@ -476,13 +483,17 @@ class Client(commands.Cog):
 
     @commands.command()
     async def lesbo(self, ctx):
-        rnd = random.randint(0,5)
-        memes = reddit.subreddit('lesbo').new(limit=7)
-        post = [p for p in memes if not p.stickied][rnd]
-        embed = discord.Embed(description=post.title , color=randint(0, 0xFFFFFF), title="Lesbians")
-        embed.set_author(name="Lesbians for cunts",icon_url="https://vignette.wikia.nocookie.net/filthy-frank/images/9/98/Salamander_Man2.png")
-        embed.set_image(url=str(post.url))
-        await ctx.send(embed=embed)
+        if ctx.channel.is_nsfw():
+            rnd = random.randint(0,5)
+            memes = reddit.subreddit('lesbo').new(limit=7)
+            post = [p for p in memes if not p.stickied][rnd]
+            embed = discord.Embed(description=post.title , color=randint(0, 0xFFFFFF), title="Lesbians")
+            embed.set_author(name="Lesbians for cunts",icon_url="https://vignette.wikia.nocookie.net/filthy-frank/images/9/98/Salamander_Man2.png")
+            embed.set_image(url=str(post.url))
+            await ctx.send(embed=embed)
+        else:
+            await ctx.send("Nigga behave yourself , this is no NSFW channel")
+
 
     @commands.command()
     async def papafranku(self, ctx):
