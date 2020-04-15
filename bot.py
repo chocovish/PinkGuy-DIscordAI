@@ -178,4 +178,4 @@ class Bot(commands.AutoShardedBot):
         await self.session.close()
 
 client = Bot(command_prefix= "ey ", pm_help=True, shard_count=7)
-client.run('NTc5NjE4Nzk1MzQyMDA0MjI0.XnoHbg.Z7l3viaCHM9TNAitvx0KmcqFwA4')
+client.run('token')
