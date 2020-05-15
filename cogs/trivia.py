@@ -61,7 +61,7 @@ class Trivia(commands.Cog):
 
 class TriviaSession():
     def __init__(self, message, settings):
-        self.gave_answer = ["Fag can't even answer this one! its {} lmao!", "How many braincells do you have? its, {}.", "Oh really nigger? It's {} of course."]
+        self.gave_answer = ["can't even answer this one! its {} lmao!"]
         self.current_q = None # {"QUESTION" : "String", "ANSWERS" : []}
         self.question_list = ""
         self.channel = message.channel
