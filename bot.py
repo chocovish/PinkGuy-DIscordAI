@@ -106,11 +106,9 @@ class Bot(commands.AutoShardedBot):
         packages = [
             'cogs.economy',
             'cogs.inventory',
-            'cogs.slaves',
             'cogs.salary',
             'cogs.music',
             'cogs.image',
-            'cogs.gay',
             'cogs.getinfo',
             'cogs.client',
         ]
