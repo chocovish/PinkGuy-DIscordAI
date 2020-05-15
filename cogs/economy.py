@@ -90,8 +90,7 @@ Total:\t\t {} chromosomes
 
     @commands.command()
     async def donate(self, ctx, amount: NumberConverter, member: discord.Member):
-        """Donate chromosomes to other users
-        Example: ey donate 69 @faggot#6969"""
+        """Donate chromosomes to other users"""
         amount = abs(amount)
         async with self.bot.di.rm.lock(ctx.author.id):
             await self.bot.di.add_eco(ctx.author, -amount)
