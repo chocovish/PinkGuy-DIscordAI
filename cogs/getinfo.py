@@ -126,14 +126,14 @@ class GetInfo(commands.Cog):
                                 passed))
 
         embed = discord.Embed(description=created_at, colour=discord.Colour(value=0x36393e))
-        embed.add_field(name="Lore", value=str(guild.region))
-        embed.add_field(name="Jobless Faggots", value="{}/{}".format(online, total_users))
-        embed.add_field(name="Faggots", value=total_humans)
+        embed.add_field(name="Server", value=str(guild.region))
+        embed.add_field(name="Online Users", value="{}/{}".format(online, total_users))
+        embed.add_field(name="Total Users", value=total_humans)
         embed.add_field(name="Bots", value=total_bots)
-        embed.add_field(name="Place Where Faggots texts", value=text_channels)
-        embed.add_field(name="Place Where Faggots screams", value=voice_channels)
-        embed.add_field(name="Roles of Faggots", value=len(guild.roles))
-        embed.add_field(name="Chief of Faggots", value=str(guild.owner))
+        embed.add_field(name="Text Channels", value=text_channels)
+        embed.add_field(name="Voice Channels", value=voice_channels)
+        embed.add_field(name="Roles", value=len(guild.roles))
+        embed.add_field(name="Server Admin", value=str(guild.owner))
         embed.set_footer(text=f"Guild ID:{str(guild.id)}")
 
         if guild.icon_url:
