@@ -274,7 +274,7 @@ class Music(commands.Cog):
             try:
                 channel = ctx.author.voice.channel
             except AttributeError:
-                await ctx.send("Are you blind retard? Cant you see that you are not connected to any voice channel!")
+                await ctx.send("Client Not in VC")
                 raise InvalidVoiceChannel('No channel to join. Please either specify a valid channel or join one.')
 
 
@@ -323,12 +323,12 @@ class Music(commands.Cog):
         vc = ctx.voice_client
 
         if not vc or not vc.is_playing():
-            return await ctx.send('Are you deaf fag? i am not playing anything lmao')
+            return await ctx.send('i am not playing anything lmao')
         elif vc.is_paused():
             return
 
         vc.pause()
-        await ctx.send(f'**`{ctx.author}`**: faggot told me to pause the scream')
+        await ctx.send(f'**`{ctx.author}`**: told me to pause the music')
         await ctx.message.add_reaction(emoji=":pinkuandsausage:668116109886750769")
 
     @commands.command(name='resume')
@@ -337,12 +337,12 @@ class Music(commands.Cog):
         vc = ctx.voice_client
 
         if not vc or not vc.is_connected():
-            return await ctx.send('Are you deaf fag? i am not playing anything lmao')
+            return await ctx.send('i am not playing anything lmao')
         elif not vc.is_paused():
             return
 
         vc.resume()
-        await ctx.send(f'**`{ctx.author}`**: faggot told to me keep screaming')
+        await ctx.send(f'**`{ctx.author}`**: told to me keep playing the music')
         await ctx.message.add_reaction(emoji=":PinkLikesU:666201750537240597")
 
     @commands.command(name='skip')
@@ -359,7 +359,7 @@ class Music(commands.Cog):
             return
 
         vc.stop()
-        await ctx.send(f'**`{ctx.author}`**: faggot told me to move to the next scream')
+        await ctx.send(f'**`{ctx.author}`**: told me to move to the next music')
         await ctx.message.add_reaction(emoji=":PinkHatesU:666201820242378752")
 
     @commands.command(name='queue', aliases=['playlist'])
@@ -368,11 +368,11 @@ class Music(commands.Cog):
         vc = ctx.voice_client
 
         if not vc or not vc.is_connected():
-            return await ctx.send('Are you blind fag? I am not connected to a voice channel', delete_after=20)
+            return await ctx.send('I am not connected to a voice channel', delete_after=20)
 
         player = self.get_player(ctx)
         if player.queue.empty():
-            return await ctx.send('There are currently no more screamings stored.')
+            return await ctx.send('There are currently no more music stored.')
 
         # Grab up to 5 entries from the queue...
         upcoming = list(itertools.islice(player.queue._queue, 0, 5))
@@ -388,11 +388,11 @@ class Music(commands.Cog):
         vc = ctx.voice_client
 
         if not vc or not vc.is_connected():
-            return await ctx.send('Are you blind fag? I am not connected to a voice channel', delete_after=20)
+            return await ctx.send('I am not connected to a voice channel', delete_after=20)
 
         player = self.get_player(ctx)
         if not player.current:
-            return await ctx.send('Are you deaf fag? i am not playing anything lmao')
+            return await ctx.send('i am not playing anything lmao')
 
         try:
             # Remove our previous now_playing message.
@@ -436,7 +436,7 @@ class Music(commands.Cog):
         vc = ctx.voice_client
 
         if not vc or not vc.is_connected():
-            return await ctx.send('Are you deaf fag? i am not playing anything lmao')
+            return await ctx.send('i am not playing anything lmao')
 
         await self.cleanup(ctx.guild)
 def setup(client):
