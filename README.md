@@ -15,16 +15,10 @@ which you can know more by using `ey help`.
   * boss        ```chat with the AI```
   * clear       ```message purge```
   * geo         ```looks up an ip address```
-  * hentai      ```sends random hentai```
-  * japanese101 ```inspired by old japanese 101 show of papafranku```
-  * joined      ```Says when a member joined.```
-  * joke        ```tells a random joke```
   * kick        ```kicks a member from server```
-  * lesbo       ```sends a random lesbian post```
   * meme        ```sends a meme```
   * papafranku  ```sends a papafranku related post```
   * ping        ```Gives your current ping status```
-  * porn        ```Sends porn```
   * punch       ```Punch someone.```
   * roast       ```Roasts the targeted user```
   * shoot       ```Shoot someone.```
@@ -47,10 +41,7 @@ which you can know more by using `ey help`.
   * sacrifice   ```Play the sacrifice```
   * search      
   * withdraw    
-  
-  # Gay:
-  * gay         ``` Gay sensor to detect gay users```
-  * ship        
+       
 # GetInfo:
   * server      
   * user
@@ -85,15 +76,6 @@ which you can know more by using `ey help`.
   * collect     
   * salaries    
   * salary      
-  
-# Slaves:
-  * bio          ```Get info on a slave ```
-  * edit         ```Edit a slave ```
-  * hire         ```hire a new slave for yourself ```
-  * nigga        ```Check the slave under you ```
-  * release      ```Release a slave from you ```
-  * slave        ```Subcommands for slave management, see ey help slave ```
-  * trade        ```Offer a trade to a user. ```
   
 # No Category:
   * help         ```Shows this message ```
