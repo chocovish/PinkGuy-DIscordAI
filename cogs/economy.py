@@ -48,7 +48,6 @@ class Economy(commands.Cog):
     @commands.command(aliases=["bal", "balance", "eco", "e"], invoke_without_command=True)
     async def chromosomes(self, ctx, *, member: discord.Member = None):
         """Check your or another users chromosomes.
-        Example: ey chromosomes @faggot#6969
         Will not display others' balances if inventory hiding is enabled."""
         dest = ctx.channel
         if member is None:
