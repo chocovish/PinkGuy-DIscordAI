@@ -216,6 +216,7 @@ class Client(commands.Cog):
     	except:
     		await ctx.send('Error has occured!')
     		print('Error has occured!')
+        
     @commands.command(pass_context=True)
     async def avatar(self, ctx, user: discord.Member=None):
         """Displays users avatar."""
@@ -251,20 +252,6 @@ class Client(commands.Cog):
         """Shoot someone."""
         embed = discord.Embed(title="Pow Pow Pow!", description="**{1}** shoots **{0}**!".format(member.name, ctx.message.author.name), color=0x176cd5)
         embed.set_image(url="http://images.rapgenius.com/2a3d0051e08c975ab8c9449753de0d02.500x281x59.gif")
-        await ctx.send(embed=embed)
-
-    @commands.command(pass_context=True)
-    async def kiss(self, ctx, member: discord.Member):
-        """kisses."""
-        embed = discord.Embed(title="MUAAAAAAAAAH", description="**{1}** shoots **{0}**!".format(member.name, ctx.message.author.name), color=0x176cd5)
-        embed.set_image(url="https://thumbs.gfycat.com/GoldenReliableAmericanbadger-size_restricted.gif")
-        await ctx.send(embed=embed)
-
-    @commands.command(pass_context=True)
-    async def lick(self, ctx, member: discord.Member):
-        """licks."""
-        embed = discord.Embed(title="*Slick* *Slick*", description="**{1}** shoots **{0}**!".format(member.name, ctx.message.author.name), color=0x176cd5)
-        embed.set_image(url="https://static1.fjcdn.com/thumbnails/comments/Lick+de+pusi+b0ss+_635e1e6779e38ea8744f5766fd849d53.gif")
         await ctx.send(embed=embed)
 
 def setup(client):
