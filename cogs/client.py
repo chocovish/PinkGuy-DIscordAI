@@ -148,8 +148,8 @@ class Client(commands.Cog):
     @commands.command()
     async def show(self, ctx , query: str):
             rnd = random.randint(0,5)
-            memes = reddit.subreddit(query).new(limit=7)
-            post = [p for p in memes if not p.stickied][rnd]
+            show = reddit.subreddit(query).new(limit=7)
+            post = [p for p in show if not p.stickied][rnd]
             embed = discord.Embed(description=post.title , color=randint(0, 0xFFFFFF), title="Random")
             embed.set_author(name="Random things",icon_url="https://vignette.wikia.nocookie.net/filthy-frank/images/9/98/Salamander_Man2.png")
             embed.set_image(url=str(post.url))
